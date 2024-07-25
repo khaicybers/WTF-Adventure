@@ -1,0 +1,136 @@
+{
+  "name": "WTF-Adventure",
+  "version": "2.0.0",
+  "description": "A modern HTML5 multiplayer adventure!",
+  "keywords": [
+    "mmo",
+    "mmorpg",
+    "html5",
+    "multiplayer",
+    "nodejs",
+    "nextjs",
+    "hackathon",
+    "browserquest",
+    "javascript",
+    "es6",
+    "canvas"
+  ],
+  "homepage": "https://github.com/khaicybers/WTF-Adventure",
+  "bugs": {
+    "url": "https://github.com/khaicybers/WTF-Adventure/issues"
+  },
+  "contributors": [
+    {
+      "name": "Veradictus",
+      "url": "https://github.com/Veradictus"
+    },
+    {
+      "name": "Noctisdark",
+      "url": "https://github.com/Noctisdark"
+    },
+    {
+      "name": "TassadarX",
+      "url": "https://github.com/TassadarX"
+    },
+    {
+      "name": "Design1online",
+      "url": "https://github.com/design1online"
+    },
+    {
+      "name": "Eric256",
+      "url": "https://github.com/eric256"
+    },
+    {
+      "name": "Spoobert",
+      "url": "https://github.com/spoobert"
+    }
+  ],
+  "license": "wtfpl-2.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "wtf": "next start",
+    "wtfserver": "cd ../server && npm start",
+    "mac-install-mysql": "brew install mysql",
+    "apt-install-mysql": "sudo apt-get update && sudo apt-get install mysql-apt-config && sudo apt-get install mysql-shell",
+    "yum-install-mysql": "sudo yum remove mysql-community-release && sudo yum install mysql-shell",
+    "dnf-install-mysql": "sudo dnf erase mysql-community-release && sudo dnf install mysql-shell",
+    "mac-mysql-start": "brew services start mysql",
+    "nix-mysql-start": "mysql-ctl start",
+    "esdocs": "./node_modules/.bin/esdoc",
+    "docs": "open ./docs/index.html",
+    "test": "jest --env=jsdom --coverage && npm run badges",
+    "badges": "make-coverage-badge"
+  },
+  "engines": {
+    "node": ">=16.0"
+  },
+  "engineStrict": true,
+  "jest": {
+    "transform": {
+      "\\.[jt]sx?$": [
+        "babel-jest",
+        {
+          "presets": [
+            "next/babel",
+            "@babel/preset-typescript",
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    },
+    "testEnvironment": "jsdom",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "socket.io-client": "^4.7.2",
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/plugin-syntax-import-assertions": "^7.22.5",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/jquery": "^3.5.22",
+    "@types/node": "20.8.2",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/underscore": "^1.11.9",
+    "babel-jest": "^29.7.0",
+    "bootstrap": "^5.3.2",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "make-coverage-badge": "^1.2.0",
+    "sass": "^1.69.0",
+    "typescript": "^5"
+  }
+}
